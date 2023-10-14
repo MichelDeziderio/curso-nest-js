@@ -1,13 +1,14 @@
+/* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { JogadoresModule } from './jogadores/jogadores.module';
 import { MongooseModule } from '@nestjs/mongoose';
+import { enviroment } from 'enviroment';
+
 
 @Module({
   imports: [
     JogadoresModule,
-    MongooseModule.forRoot(
-      'mongodb+srv://michelsilva02:<password>@cluster0.d28yzvq.mongodb.net/smartRanking',
-    ),
+    MongooseModule.forRoot(enviroment.urlMongoDB),
   ],
   controllers: [],
   providers: [],
