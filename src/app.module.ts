@@ -6,7 +6,7 @@ import { MongooseModule } from '@nestjs/mongoose';
   imports: [
     JogadoresModule,
     MongooseModule.forRoot(
-      'mongodb+srv://michelsilva02:<>@cluster0.d28yzvq.mongodb.net/smartRanking',
+      'mongodb+srv://michelsilva02:<password>@cluster0.d28yzvq.mongodb.net/smartRanking',
     ),
   ],
   controllers: [],
